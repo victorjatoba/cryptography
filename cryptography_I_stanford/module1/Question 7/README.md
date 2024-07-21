@@ -4,7 +4,16 @@ Suppose you are told that the one time pad encryption of the message "attack at 
 
 (the plaintext letters are encoded as 8-bit ASCII and the given ciphertext is written in hex). What would be the one time pad encryption of the message "attack at dusk" under the same OTP key?
 
-## My response
+## Response Breakdown
+
+To solve the one-time pad encryption problem, you need to follow these steps:
+
+1. **Convert the hex-encoded ciphertext to binary**.
+2. **Convert the plaintext message "attack at dawn" to binary**.
+3. **XOR** the binary representations of the plaintext and ciphertext to find the OTP key.
+4. **Use the OTP key** to encrypt the new message "attack at dusk".
+
+### Solution
 
 1. 
 cipher = 6c73d5240a948c86981bc294814d
@@ -24,16 +33,7 @@ messageInHex = 61747461636b206174206475736b
 messageBinary = 0110000101110100011101000110000101100011011010110010000001100001011101000010000001100100011101010111001101101011
 XOR (with key) = 0110110001110011110101010010010000001010100101001000110010000110100110000001101111000010100000001000010101001000
 
-(RESPONSE) Encryption: 6C73D5240A948C86981BC2808548
-
-## Response
-
-To solve the one-time pad encryption problem, you need to follow these steps:
-
-1. **Convert the hex-encoded ciphertext to binary**.
-2. **Convert the plaintext message "attack at dawn" to binary**.
-3. **XOR** the binary representations of the plaintext and ciphertext to find the OTP key.
-4. **Use the OTP key** to encrypt the new message "attack at dusk".
+**(RESPONSE)** Encryption: 6C73D5240A948C86981BC2808548
 
 ### Step-by-Step Solution:
 
