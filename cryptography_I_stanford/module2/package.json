@@ -1,0 +1,16 @@
+{
+  "name": "aes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cbc": "tsc cbc.ts && node cbc.js"
+  },
+  "author": "victor jatoba",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "aes-ts": "^0.0.0-alpha.0",
+    "crypto-js": "^4.2.0"
+  }
+}
