@@ -1,3 +1,12 @@
+/**
+ * How to run?
+ *   node decrypt.js ciphertext_in_hex key_in_hex
+ *
+ * argument 1: the ciphertext in hexadecimal
+ * argument 2: the key in hexadecimal
+ * result: the XOR between them
+ */
+
 // Convert hex string to byte array
 function hexToBytes(hexStr: string): Uint8Array {
   const bytes = new Uint8Array(hexStr.length / 2);
@@ -18,14 +27,12 @@ function strxor(a: Uint8Array, b: Uint8Array): Uint8Array {
 }
 
 // Hex strings to byte arrays
-const plaintext = "50494e544f"
-const key       = "5448414C4553"
-const plaintextInBytes = hexToBytes(plaintext);
-const keyInBytes = hexToBytes(key);
+const ciphertext = hexToBytes(process.argv[2]);
+const key = hexToBytes(process.argv[3]);
 
 // XOR the ciphertexts
-const xor = strxor(plaintextInBytes, keyInBytes);
+const originalMessage = strxor(ciphertext, key);
 
 // Print XOR result in hex
-console.log(Buffer.from(xor).toString('hex'));
-
+console.log(`hex:  ${Buffer.from(originalMessage).toString('hex')}`);
+console.log(`text: ${Buffer.from(originalMessage).toString('ascii')}`);

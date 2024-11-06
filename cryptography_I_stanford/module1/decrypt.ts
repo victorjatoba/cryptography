@@ -18,8 +18,8 @@ function strxor(a: Uint8Array, b: Uint8Array): Uint8Array {
 }
 
 // Hex strings to byte arrays
-const ciphertext = hexToBytes("315c4eea");
-const key = hexToBytes("030d4543");
+const ciphertext = hexToBytes("11000c150a");
+const key = hexToBytes("4149424145");
 
 // XOR the ciphertexts
 const originalMessage = strxor(ciphertext, key);

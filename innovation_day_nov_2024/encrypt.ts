@@ -18,8 +18,8 @@ function strxor(a: Uint8Array, b: Uint8Array): Uint8Array {
 }
 
 // Hex strings to byte arrays
-const plaintext = "50494e544f"
-const key       = "5448414C4553"
+const plaintext = process.argv[2] //tainadas
+const key       = process.argv[3] //ldkwieod
 const plaintextInBytes = hexToBytes(plaintext);
 const keyInBytes = hexToBytes(key);
 
@@ -27,5 +27,5 @@ const keyInBytes = hexToBytes(key);
 const xor = strxor(plaintextInBytes, keyInBytes);
 
 // Print XOR result in hex
-console.log(Buffer.from(xor).toString('hex'));
+console.log(`xor: ${Buffer.from(xor).toString('hex')}`);
 

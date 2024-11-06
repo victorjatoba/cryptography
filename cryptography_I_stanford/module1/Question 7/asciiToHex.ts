@@ -77,5 +77,5 @@ function ASCIItoHEX(ascii: string): string {
 
 // Driver code
 // Print the Hex String
-console.log(ASCIItoHEX("attack at dawn"));
-console.log(ASCIItoHEX("attack at dusk"));
+const ciphertext="PINTO"
+console.log(ASCIItoHEX(ciphertext));
