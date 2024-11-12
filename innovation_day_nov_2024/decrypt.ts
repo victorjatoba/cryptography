@@ -4,7 +4,7 @@
  *
  * argument 1: the ciphertext in hexadecimal
  * argument 2: the key in hexadecimal
- * result: the XOR between them
+ * result: the XOR between them in hex and ASCII text
  */
 
 // Convert hex string to byte array

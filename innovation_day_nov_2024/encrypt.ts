@@ -1,3 +1,12 @@
+/**
+ * How to run?
+ *   node encrypt.js plaintext_in_hex key_in_hex
+ *
+ * argument 1: the plaintext in hexadecimal
+ * argument 2: the key in hexadecimal
+ * result: the XOR between them in hex
+ */
+
 // Convert hex string to byte array
 function hexToBytes(hexStr: string): Uint8Array {
   const bytes = new Uint8Array(hexStr.length / 2);
@@ -17,9 +26,11 @@ function strxor(a: Uint8Array, b: Uint8Array): Uint8Array {
   return result;
 }
 
-// Hex strings to byte arrays
-const plaintext = process.argv[2] //tainadas
-const key       = process.argv[3] //ldkwieod
+// Input as text
+const plaintext = process.argv[2]
+const key       = process.argv[3]
+
+// convert
 const plaintextInBytes = hexToBytes(plaintext);
 const keyInBytes = hexToBytes(key);
 
